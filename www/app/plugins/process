@@ -45,7 +45,7 @@ class MacroPathHelper():
                 os.makedirs(path)
             return os.path.join(self.path, self.action, self._dict[name])
 
-        if name in ('script_path'):
+        if name in ('script_path', 'git_script_path'):
             return self._dict[name]
 
         elif name not in ('path'):
@@ -151,6 +151,7 @@ macro_path_config = {
     'end_commands': 'macro-kantu.end.json',
     'output':   'macro-kantu.json',
     'download':   '/home/nkensa/Downloads/Downloads/web2py.%s.w2p',
+    'git_script_path': '/mnt/FA80688B80684FE5/GDrive/Tree/Workspaces/2/emelit/src/copy-and-commit',
 }
 
 
@@ -211,6 +212,9 @@ if len(re.findall(r'download', a)):
         _fs = ' '.join(_fs)
         os.system('mv %(files)s %(dest)s' % dict(files=_fs, dest=macro_path.script_path))
         os.system('drive push')
+
+        print 'Enter git commit message:'
+        os.system('%s %s' % (macro_path.git_script_path, raw_input()))
     else:
         print 'No downloads'
 
