@@ -1,0 +1,221 @@
+#!/usr/bin/env python
+print "##################################################################"
+print "#    web2py plugins download macro and processing                #"
+print "#    --------------------------------------------                #"
+print "#    Script to generate kantu macro addon|plugin json for        #"
+print "#    automatic web2py plugins download and processing            #"
+print "#    (commit, push)                                              #"
+print "#                                                                #"
+print "#    Usage:                                                      #"
+print "#    ------                                                      #"
+print "#    -   ./process [action]  [app_name] [web2py app/site url]    #"
+print "#                                                                #"
+print "#    Calls:                                                      #"
+print "#    ------                                                      #"
+print "#        ./process macro projectmia /admin/design/emelit#plugins #"
+print "#            generates plugins download macros json              #"
+print "#            (kantu macro addon|plugin)                          #"
+print "#        ./process file projectmia                               #"
+print "#            generates plugins local placeholder files           #"
+print "#            (kantu macro addon|plugin)                          #"
+print "#        ./process downloads                                     #"
+print "#            process downloaded plugins:                         #"
+print "#            - move to plugin folder                             #"
+print "#            - uploads (to gdrive, could be github...)           #"
+print "#                                                                #"
+print "##################################################################"
+
+import sys, os, re, json, datetime
+
+###############
+#   HELPERS   #
+###############
+class MacroPathHelper():
+    _dict = {}
+    def __init__(self, config, action):
+        for name in config:
+            self._dict[name] = config[name]
+        self.action = action
+
+    def __getattr__(self, name):
+        import os
+        if name in ('output'):
+            path = os.path.join(self.path, self.action)
+            if not os.path.exists(path):
+                os.makedirs(path)
+            return os.path.join(self.path, self.action, self._dict[name])
+
+        if name in ('script_path'):
+            return self._dict[name]
+
+        elif name not in ('path'):
+            return os.path.join(self.path, self._dict[name])
+
+        else:
+            return os.path.join(self._dict['path'])
+
+    def get_download(self, plugin_name):
+        return str(self._dict['download'] % plugin_name)\
+              .replace('web2py.plugin_', 'web2py.plugin.')
+
+
+###############
+#   CONFIG    #
+###############
+plugins = {
+    'all' : [
+        'plugin_0_init',
+        'plugin_1_config',
+        'plugin_2_auth',
+        'plugin_3_mail',
+        'plugin_4_common',
+        'plugin_5_lang_helper',
+        'plugin_6_mail_helper',
+        'plugin_7_auth_action_helpers',
+        'plugin_8_recaptcha_wrapper',
+        'plugin_9_auth_helpers',
+        'plugin_blog',
+        'plugin_ckeditor',
+        'plugin_cliniqueafricaine',
+        'plugin_contact',
+        'plugin_dashboard',
+        'plugin_emelitautomat',
+        'plugin_external',
+        'plugin_inception',
+        'plugin_kamite',
+        'plugin_menu',
+        'plugin_mtnmomo',
+        'plugin_mychallenge',
+        'plugin_mystream',
+        'plugin_projectmia',
+        'plugin_pusher',
+        'plugin_sqldesigner',
+        'plugin_tests',
+        'plugin_theme_cosmo',
+        'plugin_theme_default',
+        'plugin_theme_emelit',
+        'plugin_theme_projectmia',
+        'plugin_threejs',
+        'plugin_utils',
+        'plugin_w2p_ajax_upload',
+        'plugin_wiki',
+        'plugin_zz_final',
+    ],
+
+    'mystream' : [
+        'plugin_0_init',
+        'plugin_1_config',
+        'plugin_2_auth',
+        'plugin_3_mail',
+        'plugin_4_common',
+        'plugin_5_lang_helper',
+        'plugin_6_mail_helper',
+        'plugin_7_auth_action_helpers',
+        'plugin_8_recaptcha_wrapper',
+        'plugin_9_auth_helpers',
+        'plugin_blog',
+        'plugin_ckeditor',
+        'plugin_contact',
+        'plugin_menu',
+        'plugin_mystream',
+        'plugin_theme_cosmo',
+    ],
+
+    'projectmia' : [
+        'plugin_0_init',
+        'plugin_1_config',
+        'plugin_2_auth',
+        'plugin_3_mail',
+        'plugin_4_common',
+        'plugin_5_lang_helper',
+        'plugin_6_mail_helper',
+        'plugin_7_auth_action_helpers',
+        'plugin_8_recaptcha_wrapper',
+        'plugin_9_auth_helpers',
+        'plugin_blog',
+        'plugin_ckeditor',
+        'plugin_contact',
+        'plugin_menu',
+        'plugin_mystream',
+        'plugin_projectmia',
+        'plugin_theme_cosmo',
+        'plugin_theme_projectmia',
+        'plugin_utils',
+    ],
+}
+macro_path_config = {
+    'script_path': './',
+    'path': 'macros',
+    'base':     'macro-kantu.base.json',
+    'commands': 'macro-kantu.commands.json',
+    'end_commands': 'macro-kantu.end.json',
+    'output':   'macro-kantu.json',
+    'download':   '/home/nkensa/Downloads/Downloads/web2py.%s.w2p',
+}
+
+
+###############
+#   PROCESS   #
+###############
+## arguments
+a = ''
+name = ''
+url = 'https://molhokwai.pythonanywhere.com/admin/design/emelit#plugins'
+
+i = 0
+for arg in sys.argv:    
+    if i == 1: a = arg
+    elif i == 2: name = arg
+    elif i == 3: url = arg
+
+    i += 1
+
+
+## process
+print
+print
+print 'Begin...'
+print
+
+l = plugins.get(name, plugins['all'])
+if len(re.findall(r'plugin|file', a)):
+    print 'Writing files...'
+    for item in l:
+        if not os.path.exists(name):
+            os.makedirs(name)
+        open(os.path.join(name, '%s.py' % item), 'w').write('')
+
+
+if len(re.findall(r'json|macro', a)):
+    print 'Writing macro json...'
+    
+    macro_path = MacroPathHelper(macro_path_config, name)
+    commands = open(macro_path.commands).read()
+    output = json.loads(open(macro_path.base).read() % dict(
+        date_time=datetime.datetime.now().strftime('%Y-%m-%d'), url=url))
+    
+    for item in l:
+        output['Commands'] += json.loads(commands % dict(plugin_name=item))['Commands']
+    output['Commands'] += json.loads(open(macro_path.end_commands).read())['Commands']
+    
+    open(os.path.join(macro_path.output), 'w').write(json.dumps(output, indent=4))
+
+
+if len(re.findall(r'download', a)):
+    print 'Processing downloads...'
+    
+    macro_path = MacroPathHelper(macro_path_config, '')
+    
+    _fs = filter(lambda x: os.path.exists(x), map(lambda x: macro_path.get_download(x), l))
+    if _fs:
+        _fs = ' '.join(_fs)
+        os.system('mv %(files)s %(dest)s' % dict(files=_fs, dest=macro_path.script_path))
+        os.system('drive push')
+    else:
+        print 'No downloads'
+
+
+print
+print 'Done.'
+print
+print

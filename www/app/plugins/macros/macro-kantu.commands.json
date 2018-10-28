@@ -1,0 +1,29 @@
+{
+  "Commands": [
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "",
+      "Value": "5000"
+    },
+    {
+      "Command": "click",
+      "Target": "link=%(plugin_name)s",
+      "Value": ""
+    },
+    {
+      "Command": "waitForVisible",
+      "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span",
+      "Value": "5000"
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"menu\"]/li[2]/a/span",
+      "Value": ""
+    }
+  ]
+}

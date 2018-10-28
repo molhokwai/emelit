@@ -1,0 +1,10 @@
+{
+  "CreationDate": "%(date_time)s",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "%(url)s",
+      "Value": ""
+    }
+  ]
+}

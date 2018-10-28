@@ -1,0 +1,147 @@
+{
+  "CreationDate": "2018-10-28",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://molhokwai.pythonanywhere.com/admin/design/emelit#plugins",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "link=plugin_0_init",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"menu\"]/li[2]/a/span",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "link=plugin_1_config",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"menu\"]/li[2]/a/span",
+      "Value": ""
+    }
+  ]
+}
+
+#!/usr/bin/env python
+import sys, os
+
+name = ''
+
+i = 0
+for arg in sys.argv:
+    if i==1: name = arg
+    i += 1
+
+plugins = {
+    'all' : [
+        'plugin_0_init',
+        'plugin_1_config',
+        'plugin_2_auth',
+        'plugin_3_mail',
+        'plugin_4_common',
+        'plugin_5_lang_helper',
+        'plugin_6_mail_helper',
+        'plugin_7_auth_action_helpers',
+        'plugin_8_recaptcha_wrapper',
+        'plugin_9_auth_helpers',
+        'plugin_blog',
+        'plugin_ckeditor',
+        'plugin_cliniqueafricaine',
+        'plugin_contact',
+        'plugin_dashboard',
+        'plugin_emelitautomat',
+        'plugin_external',
+        'plugin_inception',
+        'plugin_kamite',
+        'plugin_menu',
+        'plugin_mtnmomo',
+        'plugin_mychallenge',
+        'plugin_mystream',
+        'plugin_projectmia',
+        'plugin_pusher',
+        'plugin_sqldesigner',
+        'plugin_tests',
+        'plugin_theme_cosmo',
+        'plugin_theme_default',
+        'plugin_theme_emelit',
+        'plugin_theme_projectmia',
+        'plugin_threejs',
+        'plugin_utils',
+        'plugin_w2p_ajax_upload',
+        'plugin_wiki',
+        'plugin_zz_final',
+    ],
+
+    'mystream' : [
+        'plugin_0_init',
+        'plugin_1_config',
+        'plugin_2_auth',
+        'plugin_3_mail',
+        'plugin_4_common',
+        'plugin_5_lang_helper',
+        'plugin_6_mail_helper',
+        'plugin_7_auth_action_helpers',
+        'plugin_8_recaptcha_wrapper',
+        'plugin_9_auth_helpers',
+        'plugin_blog',
+        'plugin_ckeditor',
+        'plugin_contact',
+        'plugin_menu',
+        'plugin_mystream',
+        'plugin_theme_cosmo',
+    ],
+
+    'projectmia' : [
+        'plugin_0_init',
+        'plugin_1_config',
+        'plugin_2_auth',
+        'plugin_3_mail',
+        'plugin_4_common',
+        'plugin_5_lang_helper',
+        'plugin_6_mail_helper',
+        'plugin_7_auth_action_helpers',
+        'plugin_8_recaptcha_wrapper',
+        'plugin_9_auth_helpers',
+        'plugin_blog',
+        'plugin_ckeditor',
+        'plugin_contact',
+        'plugin_menu',
+        'plugin_mystream',
+        'plugin_projectmia',
+        'plugin_theme_cosmo',
+        'plugin_theme_projectmia',
+        'plugin_utils',
+    ],
+}
+print
+print
+print 'Begin...'
+print
+
+l = plugins.get(name, plugins['all'])
+for item in l:
+    if not os.path.exists(name):
+        os.makedirs(name)
+    open(os.path.join(name, '%s.py' % item), 'w').write('')
+
+print
+print 'Done.'
+print
+print

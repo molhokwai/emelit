@@ -1,0 +1,20 @@
+{
+  "CreationDate": "2018-10-28",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://www.pythonanywhere.com/user/molhokwai/files/home/molhokwai/web2py/applications/emelit/databases",
+      "Value": ""
+    },
+    {
+      "Command": "waitForVisible",
+      "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i",
+      "Value": "5000"
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i",
+      "Value": ""
+    }
+  ]
+}

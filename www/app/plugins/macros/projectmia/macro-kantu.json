@@ -1,0 +1,500 @@
+{
+    "Commands": [
+        {
+            "Command": "open", 
+            "Target": "https://molhokwai.pythonanywhere.com/admin/design/emelit#plugins", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_0_init", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_1_config", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_2_auth", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_3_mail", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_4_common", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_5_lang_helper", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_6_mail_helper", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_7_auth_action_helpers", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_8_recaptcha_wrapper", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_9_auth_helpers", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_blog", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_ckeditor", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_contact", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_menu", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_mystream", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_projectmia", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_theme_cosmo", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_theme_projectmia", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "link=plugin_utils", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"main_inner\"]/div/div[2]/p/span[2]/a[3]/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"menu\"]/li[2]/a/span", 
+            "Value": ""
+        }, 
+        {
+            "Command": "open", 
+            "Target": "https://www.pythonanywhere.com/user/molhokwai/files/home/molhokwai/web2py/applications/emelit/databases", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i", 
+            "Value": ""
+        }
+    ], 
+    "CreationDate": "2018-10-28"
+}
