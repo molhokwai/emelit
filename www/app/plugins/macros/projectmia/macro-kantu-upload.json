@@ -1,0 +1,405 @@
+{
+    "Commands": [
+        {
+            "Command": "open", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit#plugins", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_0_init"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_1_config"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_2_auth"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_3_mail"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_4_common"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_5_lang_helper"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_6_mail_helper"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_7_auth_action_helpers"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_8_recaptcha_wrapper"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_9_auth_helpers"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_blog"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_ckeditor"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_contact"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_menu"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_mystream"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_projectmia"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_theme_cosmo"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_theme_projectmia"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_utils"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForPageToLoad", 
+            "Target": "http://127.0.0.1:8000/admin/design/emelit", 
+            "Value": "20000"
+        }, 
+        {
+            "Command": "open", 
+            "Target": "https://www.pythonanywhere.com/user/molhokwai/files/home/molhokwai/web2py/applications/emelit/databases", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i", 
+            "Value": ""
+        }
+    ], 
+    "CreationDate": "2018-10-29"
+}

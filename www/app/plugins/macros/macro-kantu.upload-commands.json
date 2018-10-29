@@ -1,0 +1,25 @@
+{
+  "CreationDate": "2018-10-29",
+  "Commands": [
+    {
+      "Command": "click",
+      "Target": "name=pluginfile",
+      "Value": ""
+    },
+    {
+      "Command": "pause",
+      "Target": "",
+      "Value": "%(plugin_name)s"
+    },
+    {
+      "Command": "click",
+      "Target": "//*[@id=\"form8\"]/div/div/form/div/button",
+      "Value": ""
+    },
+    {
+      "Command": "waitForPageToLoad",
+      "Target": "%(after_upload_url)s",
+      "Value": "20000"
+    }
+  ]
+}

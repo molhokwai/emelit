@@ -12,18 +12,30 @@ print "#    -   ./process [action]  [app_name] [web2py app/site url]    #"
 print "#                                                                #"
 print "#    Calls:                                                      #"
 print "#    ------                                                      #"
-print "#        ./process macro projectmia /admin/design/emelit#plugins #"
-print "#            generates plugins download macros json              #"
+print "#        ./process macro projectmia                              #"
+print "#                  https://.../.../admin/design/emelit#plugins   #"
+print "#        ./process macro projectmia                              #"
+print "#                  https://.../.../admin/design/emelit#plugins   #"
+print "#                  upload                                        #"
+print "#                  https://.../.../admin/design/emelit           #"
+print "#            generates plugins download | upload macros json     #"
 print "#            (kantu macro addon|plugin)                          #"
 print "#        ./process file projectmia                               #"
 print "#            generates plugins local placeholder files           #"
 print "#            (kantu macro addon|plugin)                          #"
-print "#        ./process downloads                                     #"
+print "#        ./process download                                      #"
 print "#            process downloaded plugins:                         #"
 print "#            - move to plugin folder                             #"
 print "#            - uploads (to gdrive, could be github...)           #"
 print "#                                                                #"
+print "#        complete command samples:                                #"
+print "#            - download macro json generation: ./process macro projectmia https://molhokwwai.pythonanywhere.com/admin/design/emelit#plugins       #"
+print "#            - upload macro json generation: ./process macro projectmia http://127.0.0.1:8000/admin/design/emelit#plugins upload http://127.0.0.1:8000/admin/design/emelit                        #"
+print "#                                                                #"
+print "#                                                                #"
 print "##################################################################"
+
+
 
 import sys, os, re, json, datetime
 
@@ -45,7 +57,7 @@ class MacroPathHelper():
                 os.makedirs(path)
             return os.path.join(self.path, self.action, self._dict[name])
 
-        if name in ('script_path', 'git_script_path'):
+        if name in ('script_path', 'git_script_path', 'after_upload_url'):
             return self._dict[name]
 
         elif name not in ('path'):
@@ -54,8 +66,11 @@ class MacroPathHelper():
         else:
             return os.path.join(self._dict['path'])
 
-    def get_download(self, plugin_name):
-        return str(self._dict['download'] % plugin_name)\
+    def get_command_path(self, which='download'):
+        return os.path.join(self.path, self._dict['commands'][which])
+
+    def get_transfer_path(self, plugin_name, which='download'):
+        return str(self._dict[which] % plugin_name)\
               .replace('web2py.plugin_', 'web2py.plugin.')
 
 
@@ -147,10 +162,14 @@ macro_path_config = {
     'script_path': './',
     'path': 'macros',
     'base':     'macro-kantu.base.json',
-    'commands': 'macro-kantu.commands.json',
+    'commands': {
+        'download': 'macro-kantu.commands.json',
+        'upload': 'macro-kantu.upload-commands.json',
+    },
     'end_commands': 'macro-kantu.end.json',
-    'output':   'macro-kantu.json',
+    'output':   'macro-kantu-%s.json',
     'download':   '/home/nkensa/Downloads/Downloads/web2py.%s.w2p',
+    'upload':   '/home/nkensa/GDrive/Tree/Workspaces/dev/frameworks/web2py/plugins/molhokwai/web2py.%s.w2p',
     'git_script_path': '/mnt/FA80688B80684FE5/GDrive/Tree/Workspaces/2/emelit/src/copy-and-commit',
 }
 
@@ -162,12 +181,14 @@ macro_path_config = {
 a = ''
 name = ''
 url = 'https://molhokwai.pythonanywhere.com/admin/design/emelit#plugins'
+args = []
 
 i = 0
 for arg in sys.argv:    
     if i == 1: a = arg
     elif i == 2: name = arg
     elif i == 3: url = arg
+    elif i > 3: args.append(arg)
 
     i += 1
 
@@ -190,16 +211,26 @@ if len(re.findall(r'plugin|file', a)):
 if len(re.findall(r'json|macro', a)):
     print 'Writing macro json...'
     
+    _a = args[0] if len(args)>0 else 'download'
     macro_path = MacroPathHelper(macro_path_config, name)
-    commands = open(macro_path.commands).read()
+    commands = open(macro_path.get_command_path(which=_a)).read()
     output = json.loads(open(macro_path.base).read() % dict(
         date_time=datetime.datetime.now().strftime('%Y-%m-%d'), url=url))
     
     for item in l:
-        output['Commands'] += json.loads(commands % dict(plugin_name=item))['Commands']
+        if _a in ('download'):
+            output['Commands'] += json.loads(commands % dict(plugin_name=item))['Commands']
+        else:
+            # -Setting upload source not supported:
+            #   upload_src = macro_path.get_transfer_path(item, which='upload')
+            after_upload_url = args[1] if len(args)>1 else url
+            output['Commands'] += json.loads(commands % 
+                    dict(plugin_name=item,
+                         after_upload_url=after_upload_url)
+            )['Commands']
     output['Commands'] += json.loads(open(macro_path.end_commands).read())['Commands']
     
-    open(os.path.join(macro_path.output), 'w').write(json.dumps(output, indent=4))
+    open(os.path.join(macro_path.output % _a), 'w').write(json.dumps(output, indent=4))
 
 
 if len(re.findall(r'download', a)):
@@ -207,14 +238,14 @@ if len(re.findall(r'download', a)):
     
     macro_path = MacroPathHelper(macro_path_config, '')
     
-    _fs = filter(lambda x: os.path.exists(x), map(lambda x: macro_path.get_download(x), l))
+    _fs = filter(lambda x: os.path.exists(x), map(lambda x: macro_path.get_transfer_path(x), l))
     if _fs:
         _fs = ' '.join(_fs)
         os.system('mv %(files)s %(dest)s' % dict(files=_fs, dest=macro_path.script_path))
         os.system('drive push')
 
         print 'Enter git commit message:'
-        os.system('%s %s' % (macro_path.git_script_path, raw_input()))
+        os.system('%s %s' % (macro_path.git_script_path, '"%s"' % raw_input()))
     else:
         print 'No downloads'
 
