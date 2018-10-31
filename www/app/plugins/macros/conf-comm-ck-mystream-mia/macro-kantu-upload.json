@@ -1,0 +1,165 @@
+{
+    "Commands": [
+        {
+            "Command": "open", 
+            "Target": "https://molhokwai.pythonanywhere.com/admin/design/emelit#plugins", 
+            "Value": ""
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_1_config"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_1_config"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_4_common"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_4_common"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_ckeditor"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_ckeditor"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_mystream"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_mystream"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_projectmia"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_projectmia"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_theme_cosmo"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_theme_cosmo"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "name=pluginfile", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_theme_projectmia"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"form8\"]/div/div/form/div/button", 
+            "Value": ""
+        }, 
+        {
+            "Command": "pause", 
+            "Target": "", 
+            "Value": "plugin_theme_projectmia"
+        }, 
+        {
+            "Command": "open", 
+            "Target": "https://www.pythonanywhere.com/user/molhokwai/files/home/molhokwai/web2py/applications/emelit/databases", 
+            "Value": ""
+        }, 
+        {
+            "Command": "waitForVisible", 
+            "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i", 
+            "Value": "5000"
+        }, 
+        {
+            "Command": "click", 
+            "Target": "//*[@id=\"id_row_file_158\"]/td[2]/a/i", 
+            "Value": ""
+        }
+    ], 
+    "CreationDate": "2018-10-31"
+}

@@ -17,9 +17,9 @@
       "Value": ""
     },
     {
-      "Command": "waitForPageToLoad",
-      "Target": "%(after_upload_url)s",
-      "Value": "20000"
+      "Command": "pause",
+      "Target": "",
+      "Value": "%(plugin_name)s"
     }
   ]
 }
