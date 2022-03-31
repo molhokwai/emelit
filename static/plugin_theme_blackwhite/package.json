@@ -1,0 +1,16 @@
+{
+  "name": "emelit-generic",
+  "version": "1.0.0",
+  "description": "Generic node app for general js app developments",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "generic",
+    "emelit",
+    "app"
+  ],
+  "author": "emelit",
+  "license": "ISC"
+}

@@ -1,0 +1,22 @@
+{
+    "name": "Le Ndem",
+    "short_name" : "LNDM",
+    "description": "Pour savoir combien d'autres personnes il touche, et pour partager ton expérience avec elles, signale ton problème ici...",
+    "start_url": "le-ndem.html?utm_source=homescreen",
+    "scope" : "./",
+    "icons": [
+        {
+            "src": "./img/logo_192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/logo_512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ff0000",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ACNews report</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <base href="https://molhokwai.pythonanywhere.com/emelit/static/plugin_theme_blackwhite/" target="_blank">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Montserrat for headings, Cardo for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Leaflet CSS - For the map-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <style type="text/css">
+      .post_id {
+        font-weight: bold;
+        color:  maroon;
+      }
+      .post_text {
+          border-color: #efefef;
+          min-width: 80em;
+          min-height: 8em;
+          font-size: .9em;
+          border-bottom-color: #676767;
+          border-bottom-width: 2px;
+      }
+      .post_text:hover {
+          border-color: #ababab;
+          min-width: 80em;
+          min-height: 9em;
+      }
+      #generated {
+          border-color: #efefef;
+          min-width: 80em;
+          min-height: 30em;
+          font-size: .9em;
+      }
+    </style>
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+
+
+    <!-- about-->
+    <section id="about" class="text">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="heading">ACNEWS IMPORT RESULT TABLE</h2>
+            <p class="lead">... for daily report &amp; news report generation...</p>
+            <p class="lead small italic padl18">
+                <u>...</u>
+            </p>
+          </div>
+        </div>
+
+        <div class="controls">
+            <div class="row">
+              <div class="text-center">
+                <input type="button" value="Toggle Selected" onclick="toggleSelected()" class="btn btn-outline-primary"/>
+                <input type="button" value="Generate" onclick="generate()" class="btn btn-outline-primary"/>
+            </div>
+          </div>
+        </div>
+
+        <p>&nbsp;</p>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <table id="imported_posts">
+<thead>
+  <th><span>ID</span></th>
+  <th><span>POST</span></th>
+  <th><span title="has text">T</span></th>
+  <th><span title="has image">I</span></th>
+  <th><span title="select for report">SELECT</span></th>
+</thead>
+
+<tr class="post_row" id="row_post_24">
+  <td class="post_id">24</td>
+  <td id="post_24" class="post_text" contenteditable="true"><br/>☷[ 🔴 CONGO: L’AMÉRIQUE DE BIDEN PEUT-ELLE ARRÊTER LA CHUTE DÉMOCRATIQUE EN AFRIQUE]<br/><br/>L’AMÉRIQUE DE BIDEN PEUT-ELLE ARRÊTER LA CHUTE DÉMOCRATIQUE EN AFRIQUE !<br/><br/>Par... | À LIRE Sur ACNews - https://www.ac-news.org/congo/54885-l-amerique-de-biden-peut-elle-arreter-la-chute-democratique-en-afrique<br/>#ACNews #Congo<br/>[has_text][has_local_images]<br/>dac-presse.com | http://www.dac-presse.com/lamerique-de-biden-peut-elle-arreter-la-chute-democratique-en-afrique/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_24" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_24" type="checkbox" checked/></td>
+  <td><input name="select" id="select_24" data-row-id="row_post_24" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_25">
+  <td class="post_id">25</td>
+  <td id="post_25" class="post_text" contenteditable="true"><br/>☷[ 🔴 GABON: SELON JESSYE ELLA EKOGHA ALI BONGO A UN TALENT QUE TOUT LE MONDE N’A PAS]<br/> Devant la presse ce 17 novembre, le porte-parole de la présidence de la Républ... | À LIRE Sur ACNews - https://www.ac-news.org/gabon/54884-gabon-selon-jessye-ella-ekogha-ali-bongo-a-un-talent-que-tout-le-monde-n-a-pas<br/>#ACNews #Gabon<br/>[has_text][has_local_images]<br/>gabonreview.com | https://www.gabonreview.com/gabon-selon-jessye-ella-ekogha-ali-bongo-a-un-talent-que-tout-le-monde-na-pas/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_25" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_25" type="checkbox" checked/></td>
+  <td><input name="select" id="select_25" data-row-id="row_post_25" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_26">
+  <td class="post_id">26</td>
+  <td id="post_26" class="post_text" contenteditable="true"><br/>☷[ 🔴 GABON: L’AQUACULTURE GABONAISE EN QUÊTE DE RENTABILITÉ]<br/> Un atelier de renforcement des capacités sur les techniques de production aqua... | À LIRE Sur ACNews - https://www.ac-news.org/gabon/54883-l-aquaculture-gabonaise-en-quete-de-rentabilite<br/>#ACNews #Gabon<br/>[has_text][has_local_images]<br/>gabonreview.com | https://www.gabonreview.com/laquaculture-gabonaise-en-quete-de-rentabilite/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_26" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_26" type="checkbox" checked/></td>
+  <td><input name="select" id="select_26" data-row-id="row_post_26" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_27">
+  <td class="post_id">27</td>
+  <td id="post_27" class="post_text" contenteditable="true"><br/>☷[ 🔴 GABON: TURQUIE MOANDZA MBOMA VEND LES OPPORTUNITÉS D’INVESTISSEMENT AUX TURCS]<br/> Le directeur général de l’Agence nationale de promotion des investissements (A... | À LIRE Sur ACNews - https://www.ac-news.org/gabon/54882-gabon-turquie-moandza-mboma-vend-les-opportunites-d-investissement-aux-turcs<br/>#ACNews #Gabon<br/>[has_text][has_local_images]<br/>gabonreview.com | https://www.gabonreview.com/gabon-turquie-moandza-mboma-vend-les-opportunites-dinvestissement-aux-turcs/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_27" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_27" type="checkbox" checked/></td>
+  <td><input name="select" id="select_27" data-row-id="row_post_27" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_100">
+  <td class="post_id">100</td>
+  <td id="post_100" class="post_text" contenteditable="true"><br/>☷[ 🔴 CAMEROUN: AFRIQUE XAVI PREND LA TÊTE DU BARÇA AVANT LE DERBY SUR STARTIMES AFRICA]<br/>après avoir joué plus de 800 matchs en 17 saisons au Barça, a continué à accumul... | À LIRE Sur ACNews - https://www.ac-news.org/cameroun/54809-afrique-xavi-prend-la-tete-du-barca-avant-le-derby-sur-startimes-africa<br/>#ACNews #Cameroun<br/>[has_text]<br/>camer.be | https://www.camer.be/88794/11:1/afrique-xavi-prend-la-tete-du-barca-avant-le-derby-sur-startimes-africa.html<br/></td>
+  <td><input name="post_has_text" id="post_has_text_100" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_100" type="checkbox" checked/></td>
+  <td><input name="select" id="select_100" data-row-id="row_post_100" type="checkbox"/></td>
+</tr>
+
+<tr>
+  <td colspan="5"><hr/></td>
+</tr>
+
+<tr class="post_row" id="row_post_14">
+  <td class="post_id">14</td>
+  <td id="post_14" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: AU MALI AU MOINS 2 MILLIONS D’ENFANTS TRAVAILLENT]<br/>que l’agriculture qui occupe au moins 80% des Maliens en âge de travailler. Avec... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54895-au-mali-au-moins-2-millions-d-enfants-travaillent<br/>#ACNews #Afrique-monde<br/>[has_text]<br/>voaafrique.com | https://www.voaafrique.com/a/au-mali-au-moins-2-millions-d-enfants-travaillent/6309425.html<br/></td>
+  <td><input name="post_has_text" id="post_has_text_14" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_14" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_14" data-row-id="row_post_14" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_20">
+  <td class="post_id">20</td>
+  <td id="post_20" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: TIGRÉ DÉMOCRATIE ET ÉLECTIONS LIBRES DANS LAGENDA DE BLINKEN AU KENYA]<br/>diplomatiques pour faire taire les armes.©av.voanews.com... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54889-tigre-democratie-et-elections-libres-dans-lagenda-de-blinken-au-kenya<br/>#ACNews #Afrique-monde<br/>av.voanews.com | https://av.voanews.com/clips/VFR/2021/11/18/5151d16c-b129-46b9-917f-209814efbf73_48k.mp3<br/></td>
+  <td><input name="post_has_text" id="post_has_text_20" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_20" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_20" data-row-id="row_post_20" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_21">
+  <td class="post_id">21</td>
+  <td id="post_21" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: SOUDAN 15 MANIFESTANTS ANTI-PUTSCH TUÉS À KHARTOUM]<br/>de Khartoum où des centaines de protestataires défilent encore.<br/><br/>La plupart des... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54888-soudan-15-manifestants-anti-putsch-tues-a-khartoum<br/>#ACNews #Afrique-monde<br/>[has_text]<br/>voaafrique.com | https://www.voaafrique.com/a/soudan-15-manifestants-anti-putsch-ont-%C3%A9t%C3%A9-tu%C3%A9s-%C3%A0-khartoum/6317871.html<br/></td>
+  <td><input name="post_has_text" id="post_has_text_21" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_21" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_21" data-row-id="row_post_21" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_22">
+  <td class="post_id">22</td>
+  <td id="post_22" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: PRÉSIDENTIELLE LIBYENNE LE PRÉSIDENT DU PARLEMENT CANDIDAT]<br/>universel.©voaafrique.com... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54887-presidentielle-libyenne-le-president-du-parlement-candidat<br/>#ACNews #Afrique-monde<br/>voaafrique.com | https://www.voaafrique.com/a/pr%C3%A9sidentielle-libyenne-le-pr%C3%A9sident-du-parlement-candidat-/6317875.html<br/></td>
+  <td><input name="post_has_text" id="post_has_text_22" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_22" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_22" data-row-id="row_post_22" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_23">
+  <td class="post_id">23</td>
+  <td id="post_23" class="post_text" contenteditable="true"><br/>☷[ 🔴 CONGO: NINI TO LOBA TE LES CONGOLAIS ENTRE SOUMISSION ET REVEIL DES CONSCIENCES]<br/> » NINI TO LOBA TE !! « <br/>LES CONGOLAIS ENTRE SOUMISSION ET REVEIL DES CONSCIENCE... | À LIRE Sur ACNews - https://www.ac-news.org/congo/54886-nini-to-loba-te-les-congolais-entre-soumission-et-reveil-des-consciences<br/>#ACNews #Congo<br/>[has_text]<br/>dac-presse.com | http://www.dac-presse.com/nini-to-loba-te-les-congolais-entre-soumission-et-reveil-des-consciences/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_23" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_23" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_23" data-row-id="row_post_23" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_28">
+  <td class="post_id">28</td>
+  <td id="post_28" class="post_text" contenteditable="true"><br/>☷[ 🔴 GABON: TRANSPORT AÉRIEN AFRIJET RENFORCE SA FLOTTE DE TROIS ATR 72-600]<br/> L’entreprise Avions de transport régional (ATR) finalise la vente de trois ATR... | À LIRE Sur ACNews - https://www.ac-news.org/gabon/54881-transport-aerien-afrijet-renforce-sa-flotte-de-trois-atr-72-600<br/>#ACNews #Gabon<br/>[has_text][has_local_images]<br/>gabonreview.com | https://www.gabonreview.com/transport-aerien-afrijet-renforce-sa-flotte-de-trois-atr-72-600/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_28" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_28" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_28" data-row-id="row_post_28" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_29">
+  <td class="post_id">29</td>
+  <td id="post_29" class="post_text" contenteditable="true"><br/>☷[ 🔴 GABON: TOTAL GABON AFFICHE UN REBOND DE SES RÉSULTATS SUR LES NEUF PREMIERS MOIS DE 2021]<br/> La filiale locale du groupe pétrolier français Total a annoncé le 16 novembre,... | À LIRE Sur ACNews - https://www.ac-news.org/gabon/54880-total-gabon-affiche-un-rebond-de-ses-resultats-sur-les-neuf-premiers-mois-de-2021<br/>#ACNews #Gabon<br/>[has_text][has_local_images]<br/>gabonreview.com | https://www.gabonreview.com/total-gabon-affiche-un-rebond-de-ses-resultats-sur-les-neuf-premiers-mois-de-2021/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_29" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_29" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_29" data-row-id="row_post_29" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_30">
+  <td class="post_id">30</td>
+  <td id="post_30" class="post_text" contenteditable="true"><br/>☷[ 🔴 GABON: TOURISME BIENTÔT UNE APPLICATION POUR PROMOUVOIR LA DESTINATION GABON]<br/> L’Agence gabonaise de développement et de promotion du tourisme et de l’Hôtell... | À LIRE Sur ACNews - https://www.ac-news.org/gabon/54879-tourisme-bientot-une-application-pour-promouvoir-la-destination-gabon<br/>#ACNews #Gabon<br/>[has_text][has_local_images]<br/>gabonreview.com | https://www.gabonreview.com/tourisme-bientot-une-application-pour-promouvoir-la-destination-gabon/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_30" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_30" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_30" data-row-id="row_post_30" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_31">
+  <td class="post_id">31</td>
+  <td id="post_31" class="post_text" contenteditable="true"><br/>☷[ 🔴 CAMEROUN: SOUTH AFRICAN AIRWAYS REPREND SES VOLS VERS LAGOS]<br/>Le Nigeria permet de desservir une plus grande partie du continent africain, sel... | À LIRE Sur ACNews - https://www.ac-news.org/cameroun/54878-south-african-airways-reprend-ses-vols-vers-lagos<br/>#ACNews #Cameroun<br/>[has_text]<br/>journalducameroun.com | https://www.journalducameroun.com/south-african-airways-reprend-ses-vols-vers-lagos/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_31" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_31" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_31" data-row-id="row_post_31" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_32">
+  <td class="post_id">32</td>
+  <td id="post_32" class="post_text" contenteditable="true"><br/>☷[ 🔴 CAMEROUN: 27 DES 33 MILITANTS DU MRC ACQUITTÉS DANS LA RÉGION DE L’OUEST]<br/>Ceci sur une décision du Tribunal militaire de Bafoussam rendue le 15 novembre 2... | À LIRE Sur ACNews - https://www.ac-news.org/cameroun/54877-cameroun-27-des-33-militants-du-mrc-acquittes-dans-la-region-de-l-ouest<br/>#ACNews #Cameroun<br/>[has_text]<br/>journalducameroun.com | https://www.journalducameroun.com/cameroun-27-des-33-militants-du-mrc-acquittes-dans-la-region-de-louest-cameroun/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_32" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_32" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_32" data-row-id="row_post_32" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_34">
+  <td class="post_id">34</td>
+  <td id="post_34" class="post_text" contenteditable="true"><br/>☷[ 🔴 CAMEROUN: SAMUEL ETO’O REFUSE LE POSTE DE PREMIER VICE-PRÉSIDENT DE LA FÉCAFOOT]<br/>Malgré la négociation tenue la semaine dernière à Kinshasa en République démocra... | À LIRE Sur ACNews - https://www.ac-news.org/cameroun/54875-cameroun-samuel-eto-o-refuse-le-poste-de-premier-vice-president-de-la-fecafoot<br/>#ACNews #Cameroun<br/>[has_text]<br/>journalducameroun.com | https://www.journalducameroun.com/cameroun-samuel-etoo-refuse-le-poste-de-premier-vice-president-de-la-fecafoot-cameroun/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_34" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_34" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_34" data-row-id="row_post_34" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_35">
+  <td class="post_id">35</td>
+  <td id="post_35" class="post_text" contenteditable="true"><br/>☷[ 🔴 CAMEROUN: MAROC DAKHLA ABRITE SON 10ÈME FESTIVAL INTERNATIONAL DU FILM]<br/>La 10ème édition du Festival International du Film de Dakhla aura lieu du 8 au 1... | À LIRE Sur ACNews - https://www.ac-news.org/cameroun/54874-maroc-dakhla-abrite-son-10eme-festival-international-du-film<br/>#ACNews #Cameroun<br/>[has_text]<br/>journalducameroun.com | https://www.journalducameroun.com/maroc-dakhla-abrite-son-10eme-festival-international-du-film/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_35" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_35" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_35" data-row-id="row_post_35" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_36">
+  <td class="post_id">36</td>
+  <td id="post_36" class="post_text" contenteditable="true"><br/>☷[ 🔴 CAMEROUN: UNE FONDATION PHILANTHROPIQUE FINANCE PRÈS DE 5000 PME AFRICAINES]<br/>Pour son programme d'entrepreneuriat 2021, la Fondation Tony Elumelu (TEF, sigle... | À LIRE Sur ACNews - https://www.ac-news.org/cameroun/54873-une-fondation-philanthropique-finance-pres-de-5000-pme-africaines<br/>#ACNews #Cameroun<br/>[has_text]<br/>journalducameroun.com | https://www.journalducameroun.com/une-fondation-philanthropique-finance-pres-de-5-000-pme-africaines/<br/></td>
+  <td><input name="post_has_text" id="post_has_text_36" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_36" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_36" data-row-id="row_post_36" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_67">
+  <td class="post_id">67</td>
+  <td id="post_67" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: LE QATAR ET LE BRÉSIL SIGNENT UN ACCORD DE COOPÉRATION MILITAIRE]<br/>Qatar.©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54842-le-qatar-et-le-bresil-signent-un-accord-de-cooperation-militaire<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/le-qatar-et-le-br%C3%A9sil-signent-un-accord-de-coop%C3%A9ration-militaire-/2423891<br/></td>
+  <td><input name="post_has_text" id="post_has_text_67" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_67" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_67" data-row-id="row_post_67" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_68">
+  <td class="post_id">68</td>
+  <td id="post_68" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: VICTOR SANCHEZ LES RELATIONS BILATÉRALES ENTRE LESPAGNE ET LA TURQUIE ONT ATTEINT UN NIVEAU EXTRAORDINAIRE]<br/>espagnol.©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54841-victor-sanchez-les-relations-bilaterales-entre-lespagne-et-la-turquie-ont-atteint-un-niveau-extraordinaire<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/-victor-sanchez-les-relations-bilat%C3%A9rales-entre-lespagne-et-la-turquie-ont-atteint-un-niveau-extraordinaire/2423894<br/></td>
+  <td><input name="post_has_text" id="post_has_text_68" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_68" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_68" data-row-id="row_post_68" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_69">
+  <td class="post_id">69</td>
+  <td id="post_69" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: NIGER 25 MORTS ET DIMPORTANTS DÉGÂTS MATÉRIELS DANS DEUX ATTAQUES PRÈS DE LA FRONTIÈRE MALIENNE]<br/>malienne©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54840-niger-25-morts-et-dimportants-degats-materiels-dans-deux-attaques-pres-de-la-frontiere-malienne<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/niger-25-morts-et-dimportants-d%C3%A9g%C3%A2ts-mat%C3%A9riels-dans-deux-attaques-pr%C3%A8s-de-la-fronti%C3%A8re-malienne/2423900<br/></td>
+  <td><input name="post_has_text" id="post_has_text_69" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_69" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_69" data-row-id="row_post_69" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_70">
+  <td class="post_id">70</td>
+  <td id="post_70" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: ERDOGAN LUE DOIT REVOIR SA VISION STRATÉGIQUE DANS SES RELATIONS AVEC LA TURQUIE]<br/>Erdogan©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54839-erdogan-lue-doit-revoir-sa-vision-strategique-dans-ses-relations-avec-la-turquie<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/erdogan-lue-doit-revoir-sa-vision-strat%C3%A9gique-dans-ses-relations-avec-la-turquie/2423901<br/></td>
+  <td><input name="post_has_text" id="post_has_text_70" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_70" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_70" data-row-id="row_post_70" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_71">
+  <td class="post_id">71</td>
+  <td id="post_71" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: TURQUIE SAISIE DE PRÈS DE MILLE PIÈCES DE MONNAIE ANTIQUES DANS LE SUD-OUEST DU PAYS]<br/>vue©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54838-turquie-saisie-de-pres-de-mille-pieces-de-monnaie-antiques-dans-le-sud-ouest-du-pays<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/turquie-saisie-de-pr%C3%A8s-de-mille-pi%C3%A8ces-de-monnaie-antiques-dans-le-sud-ouest-du-pays/2423902<br/></td>
+  <td><input name="post_has_text" id="post_has_text_71" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_71" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_71" data-row-id="row_post_71" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_72">
+  <td class="post_id">72</td>
+  <td id="post_72" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: LONU CONDAMNE LOCCUPATION CONTINUE PAR LA RUSSIE DE LA PÉNINSULE DE CRIMÉE]<br/>pratiques discriminatoires envers les habitants de Crimée.©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54837-lonu-condamne-loccupation-continue-par-la-russie-de-la-peninsule-de-crimee<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/lonu-condamne-loccupation-continue-par-la-russie-de-la-p%C3%A9ninsule-de-crim%C3%A9e/2423904<br/></td>
+  <td><input name="post_has_text" id="post_has_text_72" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_72" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_72" data-row-id="row_post_72" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_73">
+  <td class="post_id">73</td>
+  <td id="post_73" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: TURQUIE 4 MIGRANTS CLANDESTINS INTERPELLÉS DANS LE NORD-EST]<br/>afghane©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54836-turquie-4-migrants-clandestins-interpelles-dans-le-nord-est<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/turquie-4-migrants-clandestins-interpell%C3%A9s-dans-le-nord-est/2423925<br/></td>
+  <td><input name="post_has_text" id="post_has_text_73" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_73" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_73" data-row-id="row_post_73" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_74">
+  <td class="post_id">74</td>
+  <td id="post_74" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: MAROC MARRAKECH ACCUEILLERA LE « FORUM DE COOPÉRATION RUSSO-ARABE À LA MI-DÉCEMBRE 2021]<br/>silencieuse » entre Moscou et Rabat.©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54835-maroc-marrakech-accueillera-le-forum-de-cooperation-russo-arabe-a-la-mi-decembre-2021<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/maroc-marrakech-accueillera-le-forum-de-coop%C3%A9ration-russo-arabe-%C3%A0-la-mi-d%C3%A9cembre-2021/2423948<br/></td>
+  <td><input name="post_has_text" id="post_has_text_74" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_74" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_74" data-row-id="row_post_74" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_75">
+  <td class="post_id">75</td>
+  <td id="post_75" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: MADAGASCAR PERQUISITION DANS LA RÉSIDENCE DE L’ÉQUIPE DE FOOTBALL TANZANIENNE]<br/>football©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54834-madagascar-perquisition-dans-la-residence-de-l-equipe-de-football-tanzanienne<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/madagascar-perquisition-dans-la-r%C3%A9sidence-de-l-%C3%A9quipe-de-football-tanzanienne/2424027<br/></td>
+  <td><input name="post_has_text" id="post_has_text_75" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_75" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_75" data-row-id="row_post_75" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_76">
+  <td class="post_id">76</td>
+  <td id="post_76" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: MEXIQUE 65 CORPS DÉCOUVERTS DANS L’EST DU PAYS]<br/>locaux©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54833-mexique-65-corps-decouverts-dans-l-est-du-pays<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/mexique-65-corps-d%C3%A9couverts-dans-l-est-du-pays/2424029<br/></td>
+  <td><input name="post_has_text" id="post_has_text_76" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_76" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_76" data-row-id="row_post_76" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_77">
+  <td class="post_id">77</td>
+  <td id="post_77" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: LES FORCES DE SÉCURITÉ TURQUES DÉTRUISENT 8 CACHETTES DE TERRORISTES DANS LE SUD-EST DU PAYS]<br/>Tunceli©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54832-les-forces-de-securite-turques-detruisent-8-cachettes-de-terroristes-dans-le-sud-est-du-pays<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/les-forces-de-s%C3%A9curit%C3%A9-turques-d%C3%A9truisent-8-cachettes-de-terroristes-dans-le-sud-est-du-pays/2424056<br/></td>
+  <td><input name="post_has_text" id="post_has_text_77" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_77" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_77" data-row-id="row_post_77" type="checkbox"/></td>
+</tr>
+
+<tr class="post_row" id="row_post_78">
+  <td class="post_id">78</td>
+  <td id="post_78" class="post_text" contenteditable="true"><br/>☷[ 🔴 AFRIQUE - MONDE: CANADA/INONDATIONS L’ÉTAT D’URGENCE DÉCRÉTÉ EN COLOMBIE-BRITANNIQUE]<br/>routiers©aa.com.tr... | À LIRE Sur ACNews - https://www.ac-news.org/afrique-monde/54831-canada-inondations-l-etat-d-urgence-decrete-en-colombie-britannique<br/>#ACNews #Afrique-monde<br/>aa.com.tr | https://www.aa.com.tr/fr/live/canada-inondations-l-%C3%A9tat-d-urgence-d%C3%A9cr%C3%A9t%C3%A9-en-colombie-britannique/2424058<br/></td>
+  <td><input name="post_has_text" id="post_has_text_78" type="checkbox" checked/></td>
+  <td><input name="post_has_img" id="post_has_img_78" type="checkbox" unchecked/></td>
+  <td><input name="select" id="select_78" data-row-id="row_post_78" type="checkbox"/></td>
+</tr>
+</table>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <textarea id="generated"></textarea>
+          </div>
+        </div>
+
+        <div class="row copyright-body">
+          <div class="col-md-6">
+            <p class="mb-md-0 text-center text-md-left">
+                &copy;2021 Emelit / template by <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>
+            </p>
+          </div>
+          <div class="col-md-6">
+            <p class="credit mb-md-0 text-center text-md-right">&nbsp;</p>
+            <!-- Please do not remove the backlink to us. It is part of the licence conditions. Thanks for understanding :) -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about end-->
+
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
+    <script src="js/front.js"></script>
+    <script>
+      let _toggleSelected = 0
+      const toggleSelected = () => {
+        if(!_toggleSelected){
+          $('input[name="select"]').each(function(i){
+            if(!this.checked){
+              $(`#${this.dataset.rowId}`).hide()
+            }
+          })
+          _toggleSelected = 1
+        } else {
+          $('tr.post_row').show()
+          _toggleSelected = 0
+        }
+      }
+
+      const posts_separator = '------------------------------'
+      const generate = () => {
+        let posts = []
+        if(_toggleSelected){
+          $('input[name="select"]').each(function(i){
+            if(this.checked){
+                posts.push($(`#${this.dataset.rowId} .post_text`).html())
+            }
+          })
+        } else {
+          if(confirm("No post selected. Generate with all?")){
+            $('.post_row .post_text').each(function(i){
+                posts.push(this.innerHtml)
+            })
+          }
+        }
+
+        let res = posts.join(posts_separator)
+        const repl = ['<br>', '\n']
+        while(res.indexOf(repl[0])>=0){
+          res = res.replace(repl[0], repl[1])
+        }
+
+        $('#generated').val(res)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Le Ndem</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Montserrat for headings, Cardo for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic,700">
+    <!-- Lightbox-->
+    <link rel="stylesheet" href="vendor/lightbox2/css/lightbox.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+
+    <!-- Leaflet CSS - For the map-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/emelit/static/plugin_theme_blackwhite/service_worker.js').then(function(registration) {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+  </head>
+  <body class="le-ndem">
+
+    <!-- about-->
+    <section id="about" class="text">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-sm-12">
+            <h2 class="heading">☷ Le NDEM</h2>
+
+            <p class="lead">-de la connexion et plus...</p>
+            <p> _______________
+                <br> Pour savoir combien d'autres personnes il touche, et pour partager ton expérience avec elles, signale ton problème ici...
+            </p>
+            <p class="note x-small text-right"> _______________
+                <br> <strong>! Note</strong> Tu pourras aussi bientôt utiliser cette appli aussi hors connexion, tes données seront envoyées dès que la connexion est rétablie...
+                <br> <em>( !fonctionnalité à venir... )</em>
+            </p>
+
+            <p class="message">&nbsp;</p>
+            <div class="form mt5 mb5">
+
+                <div class="data-container">
+                    <form class="data">
+                        <h4>Remplir et envoyer le formulaire</h4>
+                        <div class="field hidden">
+                            <input type="hidden" id="id" name="id"/>
+                        </div>
+                        <div class="field">
+                            <label>Opérateur</label>
+                            <select id="provider" name="provider" required="true">
+                                <option value="orange">Choisir...</option>
+                                <option value="orange">Orange</option>
+                                <option value="mtn">MTN</option>
+                                <option value="nexttel">Nexttel</option>
+                                <option value="camtel">Camtel</option>
+                                <option value="yoomee">Yoomee</option>
+                                <option value="other" data-other="provider-other">Autre - préciser...</option>
+                            </select>
+                            <input class="other" id="provider-other" name="provider-other" placeholder="Autre: préciser ici"/>
+                        </div>
+                        <div class="field">
+                            <label>Service</label>
+                            <select id="service" name="service" required="true">
+                                <option value="connexion">Connexion</option>
+                                <option value="calls">Appels</option>
+                                <option value="other" data-other="service-other">Autre - préciser...</option>
+                            </select>
+                            <input class="other" id="service-other" name="service-other" placeholder="Autre: préciser ici"/>
+                        </div>
+                        <div class="field">
+                            <label>Problème</label>
+                            <select id="problem" name="problem" required="true">
+                                <option value="no-connection">Pas de connexion</option>
+                                <option value="intermittent-connection">La connexion va et vient</option>
+                                <option value="slow-connection">La connexion est au ralenti</option>
+                                <option value="no-network">Pas de réseau</option>
+                                <option value="other" data-other="problem-other">Autre - préciser...</option>
+                            </select>
+                            <input class="other" id="problem-other" name="problem-other" placeholder="Autre: préciser ici"/>
+                        </div>
+                        <div class="field">
+                          <label>Détails, commentaires...</label>
+                          <textarea id="details">
+
+                          </textarea>
+                        </div>
+                    </form>
+                    <div class="field">
+                        <label>&nbsp;</label>
+                        <button type="submit" id="send-form-data" class="mt1">Envoyer</button>
+                        <!-- button id="test" class="mt1">Test</button -->
+                    </div>
+                </div>
+
+                <div class="contact-container">
+                    <form id="form-contact" class="contact" enctype="multipart/form-data" method="post">
+                        <h4>Données bien reçues !</h4>
+                        <div class="field hidden">
+                            <input type="hidden" name="id"/>
+                        </div>
+                        <div class="field">
+                            <p>Dans cette heure <span class="fs1-2 verylightmauve px-2"><span class="n-hour">986</span personnes</span> ont signalé le même problème</p>
+                            <p>Dans cette journée c'est <span class="fs1-4 yellow px-2"><span class="n-day">12 569</span> personnes</span></p>
+                            <p>Et dans ce mois <span class="fs1-6 red px-2"><span class="n-month">436 258</span> personnes</span></p>
+
+                            <p class="mt5 mb2 text-justify border-top">Remplis ton e-mail ou ton numéro de téléphone ici pour rejoindre le groupe de partage:</p>
+                            <label>Téléphone</label><input class="phone" id="phone" name="phone" placeholder="ex: +237 695 52 65 15"/>
+                            <label>E-mail</label><input class="email" id="email" name="email" placeholder="ex: alido.dando@gmail.com"/>
+
+                            <h5 class="mt5">Optionnel</h5>
+                            <p class="mb2 text-justify border-top">Pour apparaître dans la liste de nos utilisateurs...</p>
+                            <label>Ton prénom</label><input class="string" id="firstname" name="firstname" placeholder="ex: Alido"/>
+                            <label>Une image</label>
+                            <div class="img-upload">
+                                <!-- /* src: https://www.geeksforgeeks.org/preview-an-image-before-uploading-using-jquery */ -->
+                                <div class="holder">
+                    				<img id="img-preview" src="" alt="□" />
+                    				<input type="hidden" id="img-binary" name="img-binary"/>
+                    			</div>
+                    			<input type="file" name="image" id="image" />
+                            </div>
+                        </div>
+                        <div class="field">
+                          <label>&nbsp;</label><button type="submit" id="send-form-contact" class="mt1">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="confirmation-container">
+                    <form class="confirmation">
+                        <h4>Données de contact bien reçues !</h4>
+                        <div class="field">
+                            <p>Tu recevras une invitation.</p>
+                            <h5>Rendez-vous dans le groupe!</h5>
+                        </div>
+                    </form>
+                    <div class="field">
+                      <button id="send-form-confirmation" class="maut mt1 d-block">Terminer</button>
+                    </div>
+                </div>
+
+                <div class="confirmation2-container">
+                    <form class="confirmation2">
+                        <h4>Bien reçu !</h4>
+                        <div class="field">
+                            <p>Si tu as déjà ton invitation:</p>
+                            <h5>Rendez-vous dans le groupe!</h5>
+                        </div>
+                    </form>
+                    <div class="field">
+                      <button id="send-form-confirmation" class="maut mt1 d-block">Terminer</button>
+                    </div>
+                </div>
+          </div>
+
+          <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+        </div>
+
+        <div class="sidebar col-lg-4 col-sm-12 mx-auto">
+            <p>
+                <img src="img/broken-mirror-bad-luck-maze.jpg" alt="" class="img-fluid rounded-circle mt5 side-img"/>
+            </p>
+
+            <h5 class="mt5">Derniers utilisateurs</h5>
+            <div class="users-images">
+                <img src="img/666-bad-luck-be-gone-maze.jpg" alt="" class="img-fluid rounded-circle"/>
+            </div>
+        </div>
+      </div>
+
+      <div class="row copyright-body">
+          <div class="col-lg-12 border-top">
+            <p class="mb-md-0 text-center mt5">
+                &copy;6258 Nkensa / <small>template base by <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a></small>
+                <!-- Please do not remove the backlink to us. It is part of the licence conditions. Thanks for understanding :) -->
+                <br/><small>images: <a href="https://www.clipsafari.com/clips/o223613-broken-mirror-bad-luck-maze" target="_blank">clipsafari.com</a>,
+                <a href="https://freesvg.org/666-bad-luck-be-gone-maze" target="_blank">freesvg.org</a><small>
+            </p>
+          </div>
+      </div>
+
+    </section>
+    <!-- about end-->
+
+    <button class="add-button" title="Ajouter à ton écran d'accueil">Installer</button>
+
+    <!-- JavaScript files-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"> </script>
+    <script src="./js/front.js"></script>
+    <script src="./js/le-ndem.js"></script>
+  </body>
+</html>
