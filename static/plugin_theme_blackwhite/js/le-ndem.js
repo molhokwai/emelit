@@ -91,11 +91,12 @@ const onFormDataSend = (_submitterId) => {
         'phone': $('#phone').val() || null,
         'email': $('#email').val() || null,
         'firstname': $('#firstname').val() || null,
+        'plugin_name': $('#plugin_name').val() || null,
     }
 
     $.ajax({
         type: 'post',
-        url: '/emelit/plugin_lendem/post.json',
+        url: '/emelit/plugin_urgentwork/post.json',
         contentType: 'application/json',
         data: JSON.stringify(globalData),
 
@@ -130,7 +131,7 @@ $('#form-contact').on('submit', function(e){
 
     $.ajax({
         type:'post',
-        url: '/emelit/plugin_lendem/post',
+        url: '/emelit/plugin_urgentwork/post',
         data:formData,
         cache:false,
         contentType: false,
@@ -186,7 +187,7 @@ const getStats = (problem) => {
 
     $.ajax({
         type: 'get',
-        url: '/emelit/plugin_lendem/get_stats.json',
+        url: '/emelit/plugin_urgentwork/get_stats.json',
         contentType: 'application/json',
         data: JSON.stringify(data),
     }).done(function (data) {
@@ -214,10 +215,10 @@ let _user_img_n = 9
 const displayUsersImages = () => {
     $_user_img_default = $('.users-images img')
 
-    let data = {'1':'1'}
+    let data = { 'plugin_name': $('#plugin_name').val() }
     $.ajax({
         type: 'get',
-        url: '/emelit/plugin_lendem/get_users_imgs.json',
+        url: '/emelit/plugin_urgentwork/get_users_imgs.json',
         contentType: 'application/json',
         data: JSON.stringify(data),
     }).done(function (data) {
@@ -295,7 +296,7 @@ $('#test').on('click', function(e){
     let data = {'1':'1'}
     $.ajax({
         type: 'get',
-        url: '/emelit/plugin_lendem/test_get_last_img.json',
+        url: '/emelit/plugin_urgentwork/test_get_last_img.json',
         contentType: 'application/json',
         data: JSON.stringify(data),
     }).done(function (data) {
@@ -318,7 +319,7 @@ const check_connectivity = {
     is_internet_connected: function() {
         /** src: https://stackoverflow.com/questions/20043215/check-internet-connectivity-with-jquery **/
         return $.get({
-            url: "/emelit/plugin_lendem/index",
+            url: "/emelit/plugin_urgentwork/index",
             dataType: 'text',
             cache: false
         }).done(function() {
